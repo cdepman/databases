@@ -7,9 +7,25 @@ CREATE TABLE messages (
   text varchar(200),
   roomname varchar(20),
   createdAt timestamp,
-  objectId varchar(20)
+  objectId smallInt not null,
+  primary key (objectId)
   /* Describe your table here.*/
 );
+
+CREATE TABLE users (
+  username varchar(15),
+  objectId smallInt not null,
+  primary key (objectId)
+);
+
+CREATE TABLE rooms (
+  roomname varchar(20),
+  objectId smallInt not null,
+  primary key (objectId)
+);
+
+
+
 
 /* Create other tables and define schemas for them here! */
 

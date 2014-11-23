@@ -9,7 +9,6 @@ module.exports = {
       db.connect();
       db.query('select * from messages', function(rows) {
         callback(rows);
-        // db.end();
       });
     }, // a function which produces all the messages
     post: function (username, text, roomname, id) {
@@ -28,15 +27,3 @@ module.exports = {
   }
 };
 
-
-  // connection.query('insert into messages
-  //   (username, text, ...)
-  //   values ('..')', function(err, rows){
-  //   if(err){
-  //     console.log('error!');
-  //     throw err;
-  //   } else {
-  //     // console.log(rows);
-  //     return callback(rows);
-  //   }
-  // });

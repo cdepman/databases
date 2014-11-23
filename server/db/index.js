@@ -10,8 +10,6 @@ var connection = mysql.createConnection(
   {
     user: 'root',
     password:'',
-    // host:'127.0.0.1',
-    //port:3000,
     database:'chat'
   }
 );
@@ -27,10 +25,8 @@ exports.query = function(queryString, callback) {
   console.log(queryString);
   connection.query(queryString, function(err, rows){
     if(err){
-      console.log('error!');
       throw err;
     } else {
-      // console.log(rows);
       return callback(rows);
     }
   });
